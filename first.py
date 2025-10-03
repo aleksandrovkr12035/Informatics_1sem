@@ -1,9 +1,13 @@
-n = 1
+n = int(input())
+numbers = list(map(int, input().split()))
 
-def print_t(size, symb, c=1):
-    if c > size:
-        return
-    print_t(size, symb, c + 1)
-    print(symb * c)
-print(n)
-print(print_t(6, 'c'))
+total = 0
+sum = 0
+
+for i in range(1, n + 1):
+    sum += i
+
+for i in numbers:
+    total += i
+
+print (sum - total)
