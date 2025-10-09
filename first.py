@@ -1,15 +1,16 @@
-#Упражнение 1. Карты
+#Семинар 3.Упражнение 2
 
-n = int(input())
-numbers = list(map(int, input().split()))
+def mnogiteli(n):
+    a = []
+    m = 2
+    
+    while n > 1:
+        while n % m == 0:
+            a.append(m)
+            n = n // m
+        m += 1
+    
+    return a
 
-total = 0
-sum = 0
-
-for i in range(1, n + 1):
-    sum += i
-
-for i in numbers:
-    total += i
-
-print (sum - total)
+x = int(input())
+print(*mnogiteli(x))
