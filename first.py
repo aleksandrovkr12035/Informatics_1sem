@@ -1,16 +1,9 @@
-#Семинар 3.Упражнение 2
+#Семинар 2.Упражнение 4
 
-def mnogiteli(n):
-    a = []
-    m = 2
+raw = list(map(int, input().split()))
+for i in range(0, len(raw) - 1, 2): 
+    raw[i], raw[i+1] = raw[i+1], raw[i]
+print(*raw)
     
-    while n > 1:
-        while n % m == 0:
-            a.append(m)
-            n = n // m
-        m += 1
-    
-    return a
 
-x = int(input())
-print(*mnogiteli(x))
+
