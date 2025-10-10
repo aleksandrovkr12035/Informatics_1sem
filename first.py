@@ -1,9 +1,5 @@
-#Семинар 2.Упражнение 4
+#Семинар 2.Упражнение 5
 
 raw = list(map(int, input().split()))
-for i in range(0, len(raw) - 1, 2): 
-    raw[i], raw[i+1] = raw[i+1], raw[i]
+raw = [raw[-1]] + raw[:-1]
 print(*raw)
-    
-
-
